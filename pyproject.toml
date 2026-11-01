@@ -1,0 +1,21 @@
+[project]
+name = "tiny-gpt"
+version = "0.1.0"
+description = "A character-level GPT written from scratch and trained on movie dialogue"
+requires-python = ">=3.12"
+dependencies = ["matplotlib>=3.10", "torch>=2.9"]
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[build-system]
+requires = ["uv_build>=0.8,<1"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "tinygpt"
+module-root = ""
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
